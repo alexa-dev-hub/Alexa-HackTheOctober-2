@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lion facts",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "LionFactsIntent",
+          "slots": [],
+          "samples": [
+            "interesting facts about a lion",
+            "fact about a lion",
+            "facts about the lion",
+            "some facts about the lion",
+            "some interesting facts about lion",
+            "some interesting facts about lions",
+            "facts about lions",
+            "some facts about lions"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}
