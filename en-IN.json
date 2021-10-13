@@ -1,0 +1,46 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tom and jerry",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "TomNJerryIntent",
+          "slots": [],
+          "samples": [
+            "tell a fact",
+            "give me facts",
+            "give me a fact",
+            "Tell me a fact "
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "TomNJerry",
+          "slots": [],
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}
