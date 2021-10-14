@@ -1,0 +1,68 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-IN": {
+          "summary": "A cool fact app about Tom and Jerry show.",
+          "examplePhrases": [
+            "Alexa open cool tom and jerry facts"
+          ],
+          "keywords": [
+            "facts"
+          ],
+          "name": "Cool Tom and Jerry Facts",
+          "description": "A cool fact app about Tom and Jerry show.",
+          "smallIconUri": "file://assets/images/en-IN_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-IN_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:410915038892:function:4f3e3923-a335-4422-b0be-ee9eadbdf451:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:410915038892:function:4f3e3923-a335-4422-b0be-ee9eadbdf451:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:410915038892:function:4f3e3923-a335-4422-b0be-ee9eadbdf451:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:410915038892:function:4f3e3923-a335-4422-b0be-ee9eadbdf451:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-IN": {
+          "termsOfUseUrl": "https://drive.google.com/file/d/1kOkC383Q51f_jJ7rMwDCxeRX5aBpTMbf/view",
+          "privacyPolicyUrl": "https://drive.google.com/file/d/1ZOnyzfxh6zTBqK_gFy-hw-IXr-vBbfvX/view"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
