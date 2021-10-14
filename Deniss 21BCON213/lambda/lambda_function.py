@@ -5,8 +5,9 @@
 # session persistence, api calls, and more.
 # This sample is built using the handler classes approach in skill builder.
 import logging
-import ask_sdk_core.utils as ask_utils
+import ask_sdk_core.utils as ask_util
 import random
+
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler
@@ -16,23 +17,16 @@ from ask_sdk_model import Response
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-main
-facts=["They were originally named Jasper and Jinx,"
-"There was later a contest to name the characters,"
-"They were named after a cocktail," 
-"They won seven Oscars,"
+
+facts = [
+"The skin colour of the lion camouflages with the yellow colour of the grass,"
+"They have a strong sense of smell which helps them to sense their prey,"
+"Female lions are the main hunters,"
+"Lions are the only cats that live in groups,"
+"A lion's roar can be heard up to eight kilometres away,"
 ]
 
 class LaunchRequestHandler(AbstractRequestHandler):
-facts = [
-" They were originally named Jasper and Jinx. ...";
-"There was later a contest to name the characters. ...";
-"They were named after a cocktail. ...";
-"They won seven Oscars. ...";
-"They were in a live-action Gene Kelly movie. ...";  
-]
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
-  main
     """Handler for Skill Launch."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
@@ -51,27 +45,15 @@ class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
         )
 
 
-main
-class TomNJerryFactsHandler(AbstractRequestHandler):
-    """Handler for TomNJerryFacts Intent."""
+class LionFactsIntentHandler(AbstractRequestHandler):
+    """Handler for LionFactsIntent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TomNJerryFacts")(handler_input)
+        return ask_utils.is_intent_name("LionFactsIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "random.choice(facts)"
-
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
-    """Handler for TOMNJERRYFACTIntent."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TOMNJERRYFACTIntent")(handler_input)
-
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
-        speak_output = " random choise (facts)!"
-main
+        speak_output = random.choice(facts)
 
         return (
             handler_input.response_builder
@@ -89,11 +71,7 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-main
         speak_output = "You can say hello to me! How can I help?"
-
-        speak_output = " "
-main
 
         return (
             handler_input.response_builder
@@ -201,10 +179,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-main
-sb.add_request_handler(TomNJerryFactsIntentHandler())
-sb.add_request_handler(TOMNJERRYFACTIntentHandler())
-main
+sb.add_request_handler(LionFactsIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())

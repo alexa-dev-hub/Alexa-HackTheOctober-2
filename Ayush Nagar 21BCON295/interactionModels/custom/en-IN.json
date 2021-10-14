@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "workout coach",
+      "invocationName": "coffee types",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -16,18 +16,19 @@
           "samples": []
         },
         {
-          "name": "WorkOutCoachIntent",
-          "slots": [],
-          "samples": [
-            "Open workout coach",
-            "Open fitness facts ",
-            "Open BreatheTherapy",
-            "Open guided meditation"
-          ]
-        },
-        {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "CoffeeTypesIntent",
+          "slots": [],
+          "samples": [
+            "tell me a new type of coffee",
+            "tell me the name of a different coffee",
+            "tell me the types of coffee",
+            "tell me the different types of coffee",
+            "how many types of coffee are there"
+          ]
         },
         {
           "name": "AMAZON.FallbackIntent",
@@ -37,5 +38,5 @@
       "types": []
     }
   },
-  "version": "6"
+  "version": "3"
 }
