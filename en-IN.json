@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "cool tom and jerry facts",
+      "invocationName": "avengers assemble",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -20,11 +20,11 @@
           "samples": []
         },
         {
-          "name": "TomNJerryIntent",
+          "name": "AvengersAssembleFactsIntent",
           "slots": [],
           "samples": [
             "Give me a fact",
-            "Tell a fact",
+            "Tell a fact ",
             "Tell me a fact"
           ]
         },

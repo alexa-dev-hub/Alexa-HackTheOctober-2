@@ -19,8 +19,11 @@ logger.setLevel(logging.INFO)
 
 
 facts = [
-    "They were actually named as Jasper and Jinx,"
-    "They won seven oscers,"
+    "Casting Robert Downey Jr was the biggest risk for ironman aka Tony Stark,"
+    "Thor is the most powerfull avenger,"
+    "Chris Evans first denied for the role of Captain America aka Steve Rogers,"
+    "Voice artists of JARVIS and FRIDAY are real life couple,"
+    "There are three Chris in Marvel Phase 3,"
     ]
 
 class LaunchRequestHandler(AbstractRequestHandler):
@@ -42,11 +45,11 @@ class LaunchRequestHandler(AbstractRequestHandler):
         )
 
 
-class TomNJerryIntentHandler(AbstractRequestHandler):
-    """Handler for TomNJerryIntent."""
+class AvengersAssembleFactsIntentHandler(AbstractRequestHandler):
+    """Handler for AvengersAssembleFactsIntent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TomNJerryIntent")(handler_input)
+        return ask_utils.is_intent_name("AvengersAssembleFacts")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
@@ -176,7 +179,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(TomNJerryIntentHandler())
+sb.add_request_handler(AvengersAssembleFactsHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
