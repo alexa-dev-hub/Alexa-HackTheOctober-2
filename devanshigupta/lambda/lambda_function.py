@@ -17,21 +17,15 @@ from ask_sdk_model import Response
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-main
-Facts = ["They were originally named Jasper and Jinx.","There was later a contest to name the characters.","They were named after a cocktail.","They won seven Oscars.","They were in a live-action Gene Kelly movie."]
-
-class LaunchRequestHandler(AbstractRequestHandler):
 
 facts = [
-" They were originally named Jasper and Jinx. ...";
-"There was later a contest to name the characters. ...";
-"They were named after a cocktail. ...";
-"They won seven Oscars. ...";
-"They were in a live-action Gene Kelly movie. ...";  
-]
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
-main
-    """Handler for Skill Launch."""
+"they was later a contest to name the charc", 
+"They were named after a cocktail."     
+"They won seven Oscars."  
+"Tom and Jerry is an American animated media franchise."    
+    ]
+class LaunchRequestHandler(AbstractRequestHandler):
+    """Handler for TomNJerryFactsIntent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
 
@@ -44,32 +38,20 @@ main
         return (
             handler_input.response_builder
                 .speak(speak_output)
-                .ask(speak_output)
+                #.ask("add a reprompt if you want to keep the session open for the )
                 .response
         )
 
 
-main
-class TomAndJerryFactsIntentHandler(AbstractRequestHandler):
-    """Handler for Tom And Jerry Facts Intent."""
+class TomNJerryFactsIntent IntentHandler(AbstractRequestHandler):
+    """Handler for Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TomAndJerryFactsIntent")(handler_input)
+        return ask_utils.is_intent_name("TomNJerryFactsIntentIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = random.choice(Facts)
-
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
-    """Handler for TOMNJERRYFACTIntent."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TOMNJERRYFACTIntent")(handler_input)
-
-    def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
-        speak_output = " random choise (facts)!"
-main
+        speak_output = "They were originally named as jasper and jinx "
 
         return (
             handler_input.response_builder
@@ -87,11 +69,7 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-main
         speak_output = "You can say hello to me! How can I help?"
-
-        speak_output = " "
-main
 
         return (
             handler_input.response_builder
@@ -199,11 +177,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-main
-sb.add_request_handler(TomAndJerryFactsIntentHandler())
-
-sb.add_request_handler(TOMNJERRYFACTIntentHandler())
-main
+sb.add_request_handler(TomNJerryFactsIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
