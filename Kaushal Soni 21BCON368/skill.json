@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:429222569314:function:4f6f1b34-7411-44b7-98bd-5dc1291502bf:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:429222569314:function:4f6f1b34-7411-44b7-98bd-5dc1291502bf:Release_0"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:429222569314:function:4f6f1b34-7411-44b7-98bd-5dc1291502bf:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:429222569314:function:4f6f1b34-7411-44b7-98bd-5dc1291502bf:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "en-IN": {
+          "name": "Tom\u0026JerryFacts"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}
