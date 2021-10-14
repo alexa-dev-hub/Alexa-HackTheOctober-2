@@ -20,21 +20,16 @@
           "samples": []
         },
         {
-          "name": "TomNJerryFactsIntent",
+          "name": "TomNJerryIntent",
           "slots": [],
           "samples": [
-            "give me a fact",
-            "tell a fact",
-            "tell me a fact"
+            "Give me a fact",
+            "Tell a fact",
+            "Tell me a fact"
           ]
         },
         {
           "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
-          "name": "ffhghghtf",
-          "slots": [],
           "samples": []
         }
       ],
