@@ -17,14 +17,13 @@ from ask_sdk_model import Response
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-facts = [
-" They were originally named Jasper and Jinx. ...";
-"There was later a contest to name the characters. ...";
-"They were named after a cocktail. ...";
-"They won seven Oscars. ...";
-"They were in a live-action Gene Kelly movie. ...";  
-]
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
+
+facts = ["The title Tom and Jerry is taken from a book, "
+"Tom and Jerry were originally called Jasper and Jinx, "]
+
+
+
+class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
@@ -43,15 +42,15 @@ class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
         )
 
 
-class TOMNJERRYFACTINTENTHandler(AbstractRequestHandler):
-    """Handler for TOMNJERRYFACTIntent."""
+class TomNJerryIntentHandler(AbstractRequestHandler):
+    """Handler for TomNJerryIntent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("TOMNJERRYFACTIntent")(handler_input)
+        return ask_utils.is_intent_name("TomNJerryIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = " random choise (facts)!"
+        speak_output = random.choice(facts) 
 
         return (
             handler_input.response_builder
@@ -69,7 +68,7 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = " "
+        speak_output = "You can say hello to me! How can I help?"
 
         return (
             handler_input.response_builder
@@ -177,7 +176,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(TOMNJERRYFACTIntentHandler())
+sb.add_request_handler(TomNJerryIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
