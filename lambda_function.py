@@ -6,7 +6,7 @@
 # This sample is built using the handler classes approach in skill builder.
 import logging
 import ask_sdk_core.utils as ask_utils
-import randon
+import random
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler
@@ -17,18 +17,18 @@ from ask_sdk_model import Response
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-benefits=[
-    "Improve coding skills,"
-    "Helps in writing cleaner code,"
-    "Gain recognition,"
-    "A better understanding of technology,"
-    "Helps in being prepared for the project,"
-    "Reduces development costs,"
-    "Builds the organisation’s reputation,"
-    "studying the contribution guidelines of the target project,"
-    "providing the required level of automated test cases and documentation,"]
 
-
+hello=[
+"In Spanish hola,"
+"In French bonjour,"
+"In German guten tag,"
+"In Italian salve,"
+"In Chinese nǐn hǎo,"
+"In Portuguese olá,"
+"In Arabic asalaam alaikum,"
+"In Japanese konnichiwa,"
+"In Korean anyoung haseyo,"
+"In Russian Zdravstvuyte,"]
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
@@ -49,15 +49,15 @@ class LaunchRequestHandler(AbstractRequestHandler):
         )
 
 
-class opensourcecontributionIntentHandler(AbstractRequestHandler):
-    """Handler for opensourcecontributionIntent."""
+class helloindifferentlanguagesIntentHandler(AbstractRequestHandler):
+    """Handler for helloindifferentlanguagesIntent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("opensourcecontributionIntent")(handler_input)
+        return ask_utils.is_intent_name("helloindifferentlanguagesIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = random.choice(benefits)
+        speak_output = random.choice(hello)
 
         return (
             handler_input.response_builder
@@ -183,7 +183,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(opensourcecontributionIntentHandler())
+sb.add_request_handler(helloindifferentlanguagesIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
