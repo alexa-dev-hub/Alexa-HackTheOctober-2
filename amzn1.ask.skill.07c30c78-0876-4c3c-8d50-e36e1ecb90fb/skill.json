@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:368787144977:function:07c30c78-0876-4c3c-8d50-e36e1ecb90fb:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:368787144977:function:07c30c78-0876-4c3c-8d50-e36e1ecb90fb:Release_0"
+            }
+          },
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:368787144977:function:07c30c78-0876-4c3c-8d50-e36e1ecb90fb:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:368787144977:function:07c30c78-0876-4c3c-8d50-e36e1ecb90fb:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "en-IN": {
+          "name": "Cool tom and jerry facts"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}
