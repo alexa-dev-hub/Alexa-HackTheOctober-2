@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fun facts about dogs",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "FunFactsAboutDogsIntent",
+          "slots": [],
+          "samples": [
+            "tell a fact about dogs",
+            "tell me a fact about dogs",
+            "give me a fact about dogs",
+            "give me a fact",
+            "fact about animals",
+            "fact about dogs",
+            "tell a fact",
+            "tell me a fact"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}
