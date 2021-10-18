@@ -3,23 +3,23 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:310101753343:function:2563b948-c172-4a76-9589-903414845a39:Release_0"
+          "uri": "arn:aws:lambda:us-east-1:486476963304:function:e26d5878-80a4-4b92-ac2e-84125a1cd038:Release_0"
         },
         "interfaces": [],
         "regions": {
           "NA": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:310101753343:function:2563b948-c172-4a76-9589-903414845a39:Release_0"
+              "uri": "arn:aws:lambda:us-east-1:486476963304:function:e26d5878-80a4-4b92-ac2e-84125a1cd038:Release_0"
             }
           },
           "EU": {
             "endpoint": {
-              "uri": "arn:aws:lambda:eu-west-1:310101753343:function:2563b948-c172-4a76-9589-903414845a39:Release_0"
+              "uri": "arn:aws:lambda:eu-west-1:486476963304:function:e26d5878-80a4-4b92-ac2e-84125a1cd038:Release_0"
             }
           },
           "FE": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-west-2:310101753343:function:2563b948-c172-4a76-9589-903414845a39:Release_0"
+              "uri": "arn:aws:lambda:us-west-2:486476963304:function:e26d5878-80a4-4b92-ac2e-84125a1cd038:Release_0"
             }
           }
         }
@@ -31,16 +31,8 @@
       "distributionCountries": [],
       "isAvailableWorldwide": true,
       "locales": {
-        "en-US": {
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
-          ],
-          "keywords": [],
-          "name": "cool tom and jerry facts",
-          "summary": "Sample Short Description"
+        "en-IN": {
+          "name": "fun facts about honeybee"
         }
       },
       "testingInstructions": "Sample Testing Instructions."
